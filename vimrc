@@ -33,7 +33,7 @@ filetype on
 filetype indent on
 filetype plugin on
 filetype plugin indent on
-set mouse=a
+" set mouse=a
 set encoding=utf-8
 
 set clipboard=unnamed
@@ -45,7 +45,7 @@ let &t_ut=''
 " === Main code display
 " ===
 set number
-set relativenumber
+set norelativenumber
 set ruler
 set cursorline
 syntax enable
@@ -133,13 +133,13 @@ map S :w<CR>
 map <LEADER>rc :e ~/.vim/vimrc<CR>
 
 " Undo operations
-noremap l u
+" noremap l u
 " Undo in Insert mode
-inoremap <C-l> <C-u>
+" inoremap <C-l> <C-u>
 
 " Insert Key
-noremap k i
-noremap K I
+" noremap k i
+" noremap K I
 
 " Copy to system clipboard
 vnoremap Y :w !xclip -i -sel c<CR>
@@ -166,13 +166,13 @@ map <LEADER>o o<Esc>u
 " < n   i >
 "     e
 "     v
-noremap u k
-noremap n h
-noremap e j
-noremap i l
+" noremap u k
+" noremap n h
+" noremap e j
+" noremap i l
 " U/E keys for 5 times u/e (faster navigation)
-noremap U 5k
-noremap E 5j
+noremap K 5k
+noremap J 5j
 " N key: go to the start of the line
 noremap N 0
 " I key: go to the end of the line
@@ -212,10 +212,10 @@ map sn :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
 map si :set splitright<CR>:vsplit<CR>
 
 " Resize splits with arrow keys
-map <up> :res +5<CR>
-map <down> :res -5<CR>
-map <left> :vertical resize-5<CR>
-map <right> :vertical resize+5<CR>
+" map <up> :res +5<CR>
+" map <down> :res -5<CR>
+" map <left> :vertical resize-5<CR>
+" map <right> :vertical resize+5<CR>
 
 " Place the two screens up and down
 noremap sh <C-w>t<C-w>K
@@ -328,7 +328,7 @@ Plug 'majutsushi/tagbar', { 'on': 'TagbarOpenAutoClose' }
 Plug 'w0rp/ale'
 
 " Auto Complete
-" Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'davidhalter/jedi-vim'
 
